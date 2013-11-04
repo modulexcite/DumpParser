@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using Microsoft.Diagnostics.Runtime;
+﻿using Microsoft.Diagnostics.Runtime;
 using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
@@ -7,6 +6,7 @@ using System.Data;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using Winterdom.Diagnostics;
 
 namespace ClrMD_Test
 {
@@ -45,10 +45,14 @@ namespace ClrMD_Test
         static void Main(string[] args)
         {
             var path = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-            var dumpData = DataTarget.LoadCrashDump("C:\\Work\\Dumps\\Raven4_1_full.dmp");
+            var dumpData = DataTarget.LoadCrashDump("C:\\Work\\neil-dumps\\Raven.Server.crashdump");
             dumpData.SetSymbolPath(path);
-            var dacLocation = dumpData.ClrVersions[0].TryGetDacLocation();
-            var runtime = dumpData.CreateRuntime(dacLocation);
+	        string dacLocation;
+
+	        using(var dacLocator = DacLocator.FromPublicSymbolServer("C:\\localsymbols"))
+				dacLocation = dacLocator.FindDac(dumpData.ClrVersions[0]);
+                              
+	        var runtime = dumpData.CreateRuntime(dacLocation);
             var heap = runtime.GetHeap();
             
             currentHeap = heap;

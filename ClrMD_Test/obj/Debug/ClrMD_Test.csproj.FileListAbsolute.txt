@@ -1,8 +1,6 @@
 c:\users\michael\documents\visual studio 2012\Projects\ClrMD_Test\ClrMD_Test\bin\Debug\ClrMD_Test.exe.config
 c:\users\michael\documents\visual studio 2012\Projects\ClrMD_Test\ClrMD_Test\bin\Debug\ClrMD_Test.exe
 c:\users\michael\documents\visual studio 2012\Projects\ClrMD_Test\ClrMD_Test\bin\Debug\ClrMD_Test.pdb
-c:\users\michael\documents\visual studio 2012\Projects\ClrMD_Test\ClrMD_Test\bin\Debug\Microsoft.Diagnostics.Runtime.xml
-c:\users\michael\documents\visual studio 2012\Projects\ClrMD_Test\ClrMD_Test\obj\Debug\ClrMD_Test.csprojResolveAssemblyReference.cache
 c:\users\michael\documents\visual studio 2012\Projects\ClrMD_Test\ClrMD_Test\obj\Debug\ClrMD_Test.exe
 c:\users\michael\documents\visual studio 2012\Projects\ClrMD_Test\ClrMD_Test\obj\Debug\ClrMD_Test.pdb
 c:\users\michael\documents\visual studio 2012\Projects\ClrMD_Test\ClrMD_Test\bin\Debug\EPPlus.dll
